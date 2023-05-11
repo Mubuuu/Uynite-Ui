@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter ,Route,Routes} from "react-router-dom"
+// import ChooseFriendsModal from "./components/ChooseFriendsModal";
+import Event from "./pages/Event";
+import Congratulations from "./pages/Congratulations";
+import ChooseFriends from "./pages/ChooseFriends";
+import Confirm from "./pages/Confirm";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App bg-bgcolor">
+    <BrowserRouter>
+    <Routes>
+      <Route path="/page-25" element={<ChooseFriends />}></Route>
+      <Route path="/page-26" element={<Confirm />}></Route>
+      <Route path="/page-27" element={<Event />}></Route>
+      <Route path="/page-28" element={<Congratulations />}></Route>
+    </Routes>
+    </BrowserRouter>
+      </div>
+    </>
   );
 }
 
